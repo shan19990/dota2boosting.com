@@ -22,3 +22,6 @@ Thumbs.db
 # Ignore media and static files (if applicable)
 media/
 static/
+
+# .gitignore
+.env
