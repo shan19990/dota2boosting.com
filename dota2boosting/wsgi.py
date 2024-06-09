@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dota2boosting.settings')
+settings_module = 'dota2boosting.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'dota2boosting.settings'
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
